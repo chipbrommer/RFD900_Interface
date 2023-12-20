@@ -12,7 +12,11 @@ endif()
 project ("RFD900_Tester")
 
 # Add source to this project's executable.
-add_executable (RFD900_Tester "RFD900_Tester.cpp" "RFD900_Tester.h")
+add_executable (RFD900_Tester 
+    "rfd900_io.cpp" 
+    "rfd900_io.h"  
+    "main.cpp"
+)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET RFD900_Tester PROPERTY CXX_STANDARD 20)
